@@ -1,0 +1,24 @@
+mode: set
+jjchavarrg.com/go-api/user/user.go:27.28,29.16 2 1
+jjchavarrg.com/go-api/user/user.go:32.2,35.16 4 1
+jjchavarrg.com/go-api/user/user.go:38.2,38.19 1 1
+jjchavarrg.com/go-api/user/user.go:29.16,31.3 1 0
+jjchavarrg.com/go-api/user/user.go:35.16,37.3 1 0
+jjchavarrg.com/go-api/user/user.go:42.43,44.16 2 1
+jjchavarrg.com/go-api/user/user.go:47.2,50.16 4 1
+jjchavarrg.com/go-api/user/user.go:53.2,53.15 1 1
+jjchavarrg.com/go-api/user/user.go:44.16,46.3 1 0
+jjchavarrg.com/go-api/user/user.go:50.16,52.3 1 1
+jjchavarrg.com/go-api/user/user.go:57.37,59.16 2 1
+jjchavarrg.com/go-api/user/user.go:62.2,65.16 4 1
+jjchavarrg.com/go-api/user/user.go:68.2,68.27 1 1
+jjchavarrg.com/go-api/user/user.go:59.16,61.3 1 0
+jjchavarrg.com/go-api/user/user.go:65.16,67.3 1 0
+jjchavarrg.com/go-api/user/user.go:72.29,73.37 1 1
+jjchavarrg.com/go-api/user/user.go:76.2,77.16 2 1
+jjchavarrg.com/go-api/user/user.go:80.2,81.19 2 1
+jjchavarrg.com/go-api/user/user.go:73.37,75.3 1 0
+jjchavarrg.com/go-api/user/user.go:77.16,79.3 1 0
+jjchavarrg.com/go-api/user/user.go:85.33,86.18 1 1
+jjchavarrg.com/go-api/user/user.go:89.2,89.12 1 1
+jjchavarrg.com/go-api/user/user.go:86.18,88.3 1 0
