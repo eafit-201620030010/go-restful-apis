@@ -42,7 +42,8 @@ func usersGetAll(w http.ResponseWriter, r *http.Request) {
 		postBodyResponse(w, http.StatusOK, jsonResponse{})
 		return
 	}
-	postBodyResponse(w, http.StatusOK, jsonResponse{"users": users})
+	cw := cache.NewWriter(w, r)
+	postBodyResponse(cw, http.StatusOK, jsonResponse{"users": users})
 }
 
 func usersPostOne(w http.ResponseWriter, r *http.Request) {
@@ -84,7 +85,8 @@ func usersGetOne(w http.ResponseWriter, r *http.Request, id bson.ObjectId) {
 		postBodyResponse(w, http.StatusOK, jsonResponse{})
 		return
 	}
-	postBodyResponse(w, http.StatusOK, jsonResponse{"user": u})
+	cw := cache.NewWriter(w, r)
+	postBodyResponse(cw, http.StatusOK, jsonResponse{"user": u})
 }
 
 func usersPutOne(w http.ResponseWriter, r *http.Request, id bson.ObjectId) {
@@ -105,8 +107,8 @@ func usersPutOne(w http.ResponseWriter, r *http.Request, id bson.ObjectId) {
 		return
 	}
 	cache.Drop("/users")
-	cache.Drop(cache.MakeResource(r))
-	postBodyResponse(w, http.StatusOK, jsonResponse{"user": u})
+	cw := cache.NewWriter(w, r)
+	postBodyResponse(cw, http.StatusOK, jsonResponse{"user": u})
 }
 
 func usersPatchOne(w http.ResponseWriter, r *http.Request, id bson.ObjectId) {
@@ -135,8 +137,8 @@ func usersPatchOne(w http.ResponseWriter, r *http.Request, id bson.ObjectId) {
 		return
 	}
 	cache.Drop("/users")
-	cache.Drop(cache.MakeResource(r))
-	postBodyResponse(w, http.StatusOK, jsonResponse{"user": u})
+	cw := cache.NewWriter(w, r)
+	postBodyResponse(cw, http.StatusOK, jsonResponse{"user": u})
 }
 
 func usersDeleteOne(w http.ResponseWriter, r *http.Request, id bson.ObjectId) {
