@@ -110,12 +110,12 @@ BenchmarkCRUD-4     	      16	  82204860 ns/op
 
 ## Apache Bench
 
-| No cache                                                              | Cache                                             |
-| --------------------------------------------------------------------- | ------------------------------------------------- |
-| `ab -n 10000 -c 4 -H "Cache-Control: no-cache" localhost:11111/users` | `ab -n 10000 -c 4 localhost:11111/users`          |
-| ![No cache](./img/apache-bench-go-rest-no-cache.png)                  | ![Cache](./img/apache-bench-go-rest-no-cache.png) |
-| Time taken for tests: 39.415 seconds                                  | Time taken for tests: 0.946 seconds               |
-| Requests per second: 253.71 [#/sec] (mean)                            | Requests per second: 10575.04 [#/sec] (mean)      |
+| No cache                                                              | Cache                                              |
+| --------------------------------------------------------------------- | -------------------------------------------------- |
+| `ab -n 10000 -c 4 -H "Cache-Control: no-cache" localhost:11111/users` | `ab -n 10000 -c 4 localhost:11111/users`           |
+| ![No cache](./img/apache-bench-go-rest-no-cache.png)                  | ![Cache](./img/apache-bench-go-rest-cache.png.png) |
+| Time taken for tests: 39.415 seconds                                  | Time taken for tests: 0.946 seconds                |
+| Requests per second: 253.71 [#/sec] (mean)                            | Requests per second: 10575.04 [#/sec] (mean)       |
 
 ## Postman colletion
 
