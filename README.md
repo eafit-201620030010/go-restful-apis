@@ -36,6 +36,7 @@ go run main.go
 ## Run unit tests
 
 ### Unit test user
+
 ```bash
 # for user
 
@@ -49,6 +50,7 @@ go tool cover -html=coverage.out
 ```
 
 ### Unit test handlers
+
 ```bash
 # for handlers
 
@@ -62,6 +64,7 @@ go tool cover -html=coverage.out
 ```
 
 ### Unit test cache
+
 ```bash
 # for cache
 
@@ -79,6 +82,7 @@ go tool cover -html=coverage.out
 Package testing provides support for automated testing of Go packages.
 
 ### Benchmarks test handlers
+
 ```bash
 go test -bench .
 goos: linux
@@ -90,6 +94,7 @@ BenchmarkGetAllCached-4      	  150472	      7788 ns/op
 ```
 
 ### Benchmarks test user
+
 ```bash
 go test -bench .
 goos: linux
@@ -105,15 +110,20 @@ BenchmarkCRUD-4     	      16	  82204860 ns/op
 
 ## Apache Bench
 
-| No cache | Cache  |
-| -------------------- | ----------------------- |
-| ```bash ab -n 10000 -c 4 -H "Cache-Control: no-cache" localhost:11111/users``` | ```bash ab -n 10000 -c 4 localhost:11111/users``` |
-| ![No cache](./img/apache-bench-go-rest-no-cache.png) | ![Cache](./img/apache-bench-go-rest-cache.png) |
-
+| No cache                                                              | Cache                                             |
+| --------------------------------------------------------------------- | ------------------------------------------------- |
+| `ab -n 10000 -c 4 -H "Cache-Control: no-cache" localhost:11111/users` | `ab -n 10000 -c 4 localhost:11111/users`          |
+| ![No cache](./img/apache-bench-go-rest-no-cache.png)                  | ![Cache](./img/apache-bench-go-rest-no-cache.png) |
+| Time taken for tests: 39.415 seconds                                  | Time taken for tests: 0.946 seconds               |
+| Requests per second: 253.71 [#/sec] (mean)                            | Requests per second: 10575.04 [#/sec] (mean)      |
 
 ## Postman colletion
 
 [Colletion Json](./postman)
+
+## Documentation
+
+![course](./img/restful-apis-with-go.jpeg)
 
 ## License
 
